@@ -10,7 +10,7 @@ function init($pages) {
     [$path, $name, $method] = explode("@", $p);
 
     // regex escape 처리
-    // /test/:id => /^\/test\/:([^/]+)$/ 이렇게 변경됨
+    // /test/:id => /^\/test\/([^/]+)$/ 이렇게 변경됨
     $reg = preg_replace("/:([^\/])+/","([^/]+)", $path);
     $reg = preg_replace("/\//","\\/", $reg);
     $reg = "/^".$reg."$/";
